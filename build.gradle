@@ -1,0 +1,48 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+group = 'com.biast'
+version = '0.4.0'
+archivesBaseName = 'biast'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'info'
+            mods { biast { source sourceSets.main } }
+        }
+        client {}
+        server { args '--nogui' }
+    }
+}
+
+repositories { }
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title': 'biast',
+            'Specification-Vendor': 'Community fan project',
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.jar.archiveVersion,
+            'Implementation-Vendor': 'Community fan project'
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
