@@ -1,0 +1,16 @@
+{
+  "item.biast.golden_teapot": "Золотой чайник",
+  "item.biast.slacker_spawn_egg": "Яйцо призыва Слакера",
+  "entity.biast.slacker": "Слакер",
+  "entity.biast.observer": "Обсервер",
+  "entity.biast.cubedhexa22": "КубедГекса22",
+  "entity.biast.ashle": "Эшли",
+  "item.biast.observer_spawn_egg": "Яйцо призыва Обсервера",
+  "item.biast.cubedhexa22_spawn_egg": "Яйцо призыва КубедГекса22",
+  "item.biast.ashle_spawn_egg": "Яйцо призыва Эшли",
+  "item.biast.medkit": "Аптечка",
+  "item.biast.stun_charm": "Оглушающий талисман",
+  "item.biast.dash_charge": "Заряд рывка",
+  "item.biast.void_relic": "Пустотный артефакт",
+  "item.biast.command_book": "Справочник BIAST"
+}
